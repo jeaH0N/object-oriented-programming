@@ -1,0 +1,117 @@
+#include <iostream>//LAB1
+using namespace std;
+
+int main()
+{
+	int i,j;
+	int sum;
+	for (i = 2; i <= 9; i++)
+	{
+		for (j = 1; j <= 9; j++)
+		{
+			sum = i * j;
+			cout << i << "x" << j << "=" << sum << "\t";
+			
+		}
+		cout << endl;
+	}
+	return 0;
+}
+
+#include <iostream>
+#include <cstring>
+#define _CRT_SECURE_NO_WARNINGS
+using namespace std;
+
+int main() {
+	char name[100];
+	int i,j;
+	cout << "문자열 입력>>";
+	cin.getline(name, 100);
+	for (i = 1; i < strlen(name); i++)
+	{
+		for (j = 0; j <= i;j++)
+		{
+			cout << name[j];
+		}
+		cout << endl;
+	}
+	
+
+	return 0;
+}//LAB2
+
+#include <iostream>
+using namespace std;
+int sum(int a,int b);
+
+int main()
+{
+	int n = 0;
+	cout << "끝 수를 입력하세요>";
+	cin >> n;
+	cout << "1에서 " << n << "까지의 합은 " << sum(1, n) << "입니다." << endl;
+	return 0;
+}
+
+int sum(int a, int b)
+{
+	int k, res = 0;
+	for (k = a; k <= b; k++)
+	{
+		res += k;
+	}
+	return res;
+}//LAB3
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main()
+{
+	int num;//잔수
+	int total = 0;//판매 총 금액
+	int order;//현재 주문한 금액
+
+	char menu[100];
+
+	cout << "espresso 2000원, americano 2300원, cappuccino 2500원입니다." << endl;
+	
+	 while (1);
+	{
+		cout << "주문>>";
+		cin >> menu >> num;
+		if (strcmp(menu, "espresso") == 0)
+		{
+			order = 2000 * num;
+			cout << 2000 * num << " 원 입니다. 맛있게 드세요" << endl;
+		}
+		else if (strcmp(menu, "americano") == 0)
+		{
+			order = 2300 * num;
+			cout << 2300 * num << " 원 입니다. 맛있게 드세요" << endl;
+		}
+		else if (strcmp(menu, "cappuccino") == 0)
+		{
+			order = 2500 * num;
+			cout << 2500 * num << " 원 입니다. 맛있게 드세요" << endl;
+		}
+		else
+		{
+			order = 0;
+		}
+		if (order > 0) {
+			cout << order << "원입니다. 맛있게 드세요" << endl;
+		}
+		else {
+			cout << "없는 커피입니다. 다시 입력해주세요." << endl;
+		}
+		total += order;
+		if (total > 20000) 
+		{
+			cout << "오늘" << total << "판매, 영업 종료" << endl ;
+			
+		}
+	}
+	return 0;
+}//LAB4
